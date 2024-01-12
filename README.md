@@ -1,3 +1,47 @@
+# Flutter Basic Widget
+
+
+![] (https://docs.flutter.dev/ui/widgets/basics)
+   - Container
+   - SizedBox
+   - Text
+   - Center
+   - Icon
+   - Image
+   - Button
+   - Row
+   - Column
+   - Scaffold
+   - AppBar
+
+
+##### Text
+    ```dart
+
+        Text('Hello World'),
+
+    ```
+
+##### Center
+    ```dart
+
+        Center(
+          child: Text('Hello World'),
+        ),
+
+    ```
+
+##### Container
+    ```dart
+
+        Container(
+          padding: const EdgeInsets.all(8.0),
+          color: Colors.blue[600],
+          child: Text('Hello World'),
+        ),
+
+    ```
+
 ##### SizedBox
     ```dart
 
