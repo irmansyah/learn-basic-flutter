@@ -15,45 +15,37 @@
    - AppBar
 
 
-##### Text
+### Text
     ```dart
-
         Text('Hello World'),
-
     ```
 
-##### Center
+### Center
     ```dart
-
         Center(
           child: Text('Hello World'),
         ),
-
     ```
 
-##### Container
+### Container
     ```dart
-
         Container(
           padding: const EdgeInsets.all(8.0),
           color: Colors.blue[600],
           child: Text('Hello World'),
         ),
-
     ```
 
-##### SizedBox
+### SizedBox
     ```dart
-
         SizedBox(
           width: 200,
           height: 200,
           child: Text('Hello World'),
         ),
-
     ```
 
-##### Icon
+### Icon
     ```dart
 
         Icon(
@@ -61,32 +53,26 @@
           color: Colors.green,
           size: 30.0,
         ),
-
     ```
 
-##### Image
+### Image
     ```dart
-
 	    Image(
 	      image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
 	    ),
-
     ```
 
-##### Button
+### Button
     ```dart
-
 	    ElevatedButton(
           style: style,
           child: const Text('Enabled'),
           onPressed: () {},
         ),
-
     ```
 
-##### Row
+### Row
     ```dart
-
 	    Row(
           children: <Widget>[
             Expanded(
@@ -102,12 +88,10 @@
             ),
           ],
         ),
-
     ```
 
-##### Row
+### Row
     ```dart
-
 	    Column(
           children: <Widget>[
             Text('Deliver features faster'),
@@ -119,41 +103,33 @@
             ),
           ],
         ),
-
     ```
 
-##### Scaffold
+### Scaffold
     ```dart
-
         Scaffold(
           body: Center(child: Text('You have pressed the button $_count times.')),
         )
-
     ```
 
-##### AppBar
+### AppBar
     ```dart
-
         AppBar(
           title: const Text('Sample Code'),
         ),
-
     ```
 
-##### Floating Action Button
+### Floating Action Button
     ```dart
-
         FloatingActionButton(
           tooltip: 'Increment Counter',
           child: const Icon(Icons.add),
           onPressed: () => setState(() => _count++),
         ),
-
     ```
 
-##### Simple Project
+### Simple Project
     ```dart
-
         Scaffold(
           appBar: AppBar(
             title: const Text('Sample Code'),
@@ -165,12 +141,10 @@
             onPressed: () => setState(() => _count++),
           ),
         )
-
     ```
 
-##### Simple Project
+### Simple Project
     ```dart
-
         Scaffold(
           appBar: AppBar(
             title: const Text('Sample Code'),
@@ -182,5 +156,4 @@
             onPressed: () => setState(() => _count++),
           ),
         )
-
     ```
