@@ -16,9 +16,10 @@
 
 
 ### Text
-    ```dart
-        Text('Hello World'),
-    ```
+```dart
+Text('Hello World'),
+```
+
 
 ### Center
     ```dart
