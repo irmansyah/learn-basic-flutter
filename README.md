@@ -147,42 +147,74 @@ Scaffold(
 ```dart
 import 'package:flutter/material.dart';
 
-/// Flutter code sample for [Scaffold].
+void main() {
+  runApp(const MyApp());
+}
 
-void main() => runApp(const ScaffoldExampleApp());
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-class ScaffoldExampleApp extends StatelessWidget {
-  const ScaffoldExampleApp({super.key});
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: ScaffoldExample(),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class ScaffoldExample extends StatefulWidget {
-  const ScaffoldExample({super.key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
 
   @override
-  State<ScaffoldExample> createState() => _ScaffoldExampleState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _ScaffoldExampleState extends State<ScaffoldExample> {
-  int _count = 0;
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sample Code'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
       ),
-      body: Center(child: Text('You have pressed the button $_count times.')),
-      backgroundColor: Colors.blueGrey.shade200,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
+            ),
+            Center(
+              child: Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+            ),
+            const Image(
+              image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+            )
+          ],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => setState(() => _count++),
-        tooltip: 'Increment Counter',
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );
