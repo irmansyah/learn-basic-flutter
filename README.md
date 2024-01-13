@@ -90,7 +90,7 @@ Row(
 ),
 ```
 
-### Row
+### Column
 ```dart
 Column(
   children: <Widget>[
