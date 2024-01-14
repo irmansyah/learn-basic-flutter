@@ -31,7 +31,7 @@ Stack(
 )
 ```
 
-### StatefulWidget
+### StatelessWidget
 ```dart
 class MyApp extends StatelessWidget {
   @override
