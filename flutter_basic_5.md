@@ -116,7 +116,7 @@ class UserListBloc extends Bloc<UserListEvent, UserListState> {
           final nextPageKey = event.pageKey + 1;
           emit(UserListLoaded(data: data, nextPageKey: nextPageKey));
         }
-      } on FailedException catch (e, stackTrace) {
+      } on DioException catch (e, stackTrace) {
         debugPrint(stackTrace.toString());
         emit(UserListError(code: e.statusCode, message: e.message));
       } catch (e, stackTrace) {
