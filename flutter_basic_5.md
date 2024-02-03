@@ -45,7 +45,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  bloc: ^8.1.3
+  flutter_bloc: ^8.1.3
 ```
 
 ```dart
