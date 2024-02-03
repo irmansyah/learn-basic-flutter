@@ -212,7 +212,6 @@ class UserListEntity extends BaseEntity {
 
   UserListEntity({
     List<UserEntity>? datas,
-    bool? isLastPage,
   })  : datas = datas ?? [];
 }
 
