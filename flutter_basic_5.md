@@ -206,6 +206,30 @@ class GetUserList extends UserListEvent {
 ```
 
 ```dart
+// user_list_entity.dart
+class UserListEntity extends BaseEntity {
+  final List<UserEntity> datas;
+
+  UserListEntity({
+    List<UserEntity>? datas,
+    bool? isLastPage,
+  })  : datas = datas ?? [];
+}
+
+class UserEntity extends BaseEntity {
+  final String id;
+  final String title;
+
+  UserEntity({
+    String? id,
+    String? title,
+  })  : id = id ?? '',
+        title = title ?? '';
+
+}
+```
+
+```dart
 //app_repository.dart
 class AppRepository {
   final AppService appService;
