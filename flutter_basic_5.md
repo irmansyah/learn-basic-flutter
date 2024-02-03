@@ -91,7 +91,7 @@ class CounterPage extends StatelessWidget {
 
 ```dart
 // user_list_bloc.dart
-class UserListBloc extends BaseApiBloc<UserListEvent, UserListState> {
+class UserListBloc extends Bloc<UserListEvent, UserListState> {
   final AppRepository repository;
 
   static const int _pageLimit = 5;
